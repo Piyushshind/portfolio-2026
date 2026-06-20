@@ -11,7 +11,7 @@ A modern, fully responsive, animated personal portfolio built with React, TypeSc
 - Fully responsive / mobile-first, accessible (WCAG), and reduced-motion friendly
 - Single source of truth for content in `src/data/resume.ts`
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack 
 
 - **Framework:** React 19 + TypeScript + Vite
 - **Styling:** Tailwind CSS v4 + shadcn/ui
