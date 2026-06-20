@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Piyush Shinde — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive, animated personal portfolio built with React, TypeScript, Tailwind CSS and Motion. Design concept: **"Aurora Glass"** — a deep midnight canvas with animated cyan→violet gradient mesh, frosted-glass panels, and orchestrated scroll animations.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Animated hero with staggered reveal and gradient-animated name
+- Sticky glass navbar with scroll-spy and light/dark theme toggle
+- Sections: About, Skills (marquee + cards), Experience timeline, Projects (3D-tilt cards), Contact
+- Magnetic buttons, scroll-triggered reveals, and an animated aurora background
+- Fully responsive / mobile-first, accessible (WCAG), and reduced-motion friendly
+- Single source of truth for content in `src/data/resume.ts`
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19 + TypeScript + Vite
+- **Styling:** Tailwind CSS v4 + shadcn/ui
+- **Animation:** Motion (Framer Motion)
+- **Icons:** lucide-react
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# start dev server (http://localhost:5173)
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# production build
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# preview the production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+  components/
+    layout/      → Navbar, Footer
+    sections/    → Hero, About, Skills, Experience, Projects, Contact
+    shared/      → reveal, magnetic, tilt-card, section-heading, icons
+    ui/          → shadcn primitives
+  data/          → resume.ts (all content lives here)
+  hooks/         → useTheme, useScrollSpy
+  index.css      → Aurora Glass design system
+```
+
+## 👤 Author
+
+**Piyush Shinde** — Frontend Engineer
+[GitHub](https://github.com/Piyushshind) · [LinkedIn](https://www.linkedin.com/in/piyush-shinde-lk)
